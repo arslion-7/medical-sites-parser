@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Viewer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .article-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .meta-info {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 20px;
+        }
+        .meta-info a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .meta-info a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .content p {
+            margin-bottom: 10px;
+        }
+        .content .key-takeaways {
+            font-weight: bold;
+        }
+        .article-link {
+            margin-top: 20px;
+            display: block;
+            text-align: right;
+        }
+        .article-link a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .article-link a:hover {
+            text-decoration: underline;
+        }
+        .controls {
+            max-width: 800px;
+            margin: 20px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .controls input {
+            padding: 10px;
+            font-size: 16px;
+        }
+        .controls button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .controls button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="controls">
+        <input type="date" id="date-input" value="2024-07-20">
+        <button onclick="fetchArticles()">Fetch Articles</button>
+    </div>
+    <div id="articles-container"></div>
+
+    <script>
+        async function fetchArticles() {
+            const dateInput = document.getElementById('date-input').value;
+            const endpoint = `https://d5dtvdk9rps5pmn5i7oh.apigw.yandexcloud.net/parserInfo?date=${dateInput}`;
+            
+            try {
+                const response = await fetch(endpoint);
+                const articles = await response.json();
+                const container = document.getElementById('articles-container');
+                
+                // Clear previous articles
+                container.innerHTML = '';
+                
+                articles.forEach(article => {
+                    const articleElement = document.createElement('div');
+                    articleElement.classList.add('container');
+
+                    articleElement.innerHTML = `
+                        <div class="article-title">${article.title}</div>
+                        <div class="meta-info">
+                            Published on: ${new Date(article.publishedDate).toLocaleDateString()}<br>
+                            Main URL: <a href="${article.mainUrl}" target="_blank">${article.mainUrl}</a>
+                        </div>
+                        <div class="content">
+                            ${article.content.split('\n').map(line => line.startsWith('-') ? `<p class="key-takeaways">${line}</p>` : `<p>${line}</p>`).join('')}
+                        </div>
+                        <div class="article-link">
+                            <a href="${article.articleUrl}" target="_blank">Read full article</a>
+                        </div>
+                    `;
+                    container.appendChild(articleElement);
+                });
+            } catch (error) {
+                console.error('Error fetching articles:', error);
+            }
+        }
+
+        // Fetch articles on initial load
+        window.onload = fetchArticles;
+    </script>
+</body>
+</html>

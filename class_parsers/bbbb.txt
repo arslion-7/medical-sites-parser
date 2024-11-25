@@ -1,0 +1,22 @@
+curl 'https://onlinelibrary.wiley.com/action/doSearch?SeriesKey=15251470&sortBy=Earliest&startPage=0&pageSize=20' \
+  -H 'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7' \
+  -H 'accept-language: en-US,en;q=0.9' \
+  -H 'cache-control: max-age=0' \
+  -H 'cookie: MAID=NAxizPA/uvEVc9g8RiqOPA==; osano_consentmanager_uuid=d87e5f85-1190-45ac-a13a-8ce912c9fcc6; osano_consentmanager=r2u_IewxbzptUoOr7QpjlZZwxsAWQVB6hpJxzBj2jzOeYcFkonXaWndbvDR38deGAK8MuNHfNlqVf061C1NeFonAOzVgHQuUujL56zreAlzhL9Jr_FyiOQKPKqUtQXZ9Dtr7F_R8_joA3c707QLcZgx9PiEsHuQqOMm2-177YlbhgUuW30uJ6e_VOzrc_7-EVquvC7PcJ0Z9NzthMJaNp87JGhaJBy0a35BQKH0hDOY9cpfeMzCXFHBRWKJzH2WO753UO6L5yUb8CRYaoyxj8zxOoaI_vheqqnV9b9lNtsuTUjKeU5PfNLNIBK--jBN3Y9gV-1faKkk=; _fbp=fb.1.1723569109523.850704915140599340; randomizeUser=0.2948719231265049; AMCV_1B6E34B85282A0AC0A490D44%40AdobeOrg=MCMID|06686298661608788520557398801951195667; Hm_lvt_953dddc9c7bea72022e3bd3ba7782e7b=1725013553; __gads=ID=703dd719e8dd9bc5:T=1725013555:RT=1725013555:S=ALNI_MarLxqunn__Qvysp6JvW4yz5zy7iQ; __gpi=UID=00000eae27085ff6:T=1725013555:RT=1725013555:S=ALNI_MaSO2rQ60eLjsJD0piqbAFpLawa5g; rskxRunCookie=0; rCookie=ul0ax6eqdt41vgxsps7km0gkjbmr; kndctr_1B6E34B85282A0AC0A490D44_AdobeOrg_identity=CiYwNjY4NjI5ODY2MTYwODc4ODUyMDU1NzM5ODgwMTk1MTE5NTY2N1IRCIKGxpaaMhgBKgRJUkwxMAHwAZWN0oqbMg%3D%3D; _gid=GA1.2.1314817064.1725256992; _gcl_au=1.1.289402404.1725256994; userRandomGroup=50; MACHINE_LAST_SEEN=2024-09-02T07%3A46%3A04.602-07%3A00; JSESSIONID=3FE1EC4248C0A457F325B3841A835985; __cf_bm=yBiwZ5kownkRcmJeV4M8yx6D5q1ANPXO.AAsCLGc5cU-1725288364-1.0.1.1-XBk7aLEbjxBEKQ6NgxFE6eKkrPWmr3mdKG7ALj8PsAqQu4dPWyWlCethZt4cT3LiLy7IlWqrTUug1QF4XeP0uzNpjQ.L0UzGuNjhQKnNLIg; kndctr_1B6E34B85282A0AC0A490D44_AdobeOrg_cluster=irl1; cf_clearance=UCur.8TsY9MfIa2UCmjgMusJKr3M5a1SDeiVU1iWR4o-1725289598-1.2.1.1-I.uz7wllJyVAu31yZeYsOwfBTp_p9KKSbSLI1VSQ_B6sKI0fadwCeeYz0V9EYfgY8P7L.ioSPrcUSDVNubARB2UpqmX2yRhyDCmOi37_yHNEN5F5fgIXbIIQKinxSYd3ZOVzhDAbGRq1Lnq5ButZ5n2GL17FI7gocPjqbyr.s7vtBlkMu109iArTpfvS8875aKBoNKC24piVhGuTny1CkiMDs2clCIer6dGSuNUpecBBhfCAIFihbS7Ywt5OkXwiGBRZ5hqiCyigA7XoCACc.o.Z8pZ778C1OZbGYvums5d0TpkW3j2IWfK9htihc6ChD.KJuuYByDgt2vT6UtfBUQNJpu8FJ8VeMFV25FxInLa2yU3LGjAbiQ.ckwwK0K73zCk97qAOnl6AquLQXqNCRQ; _gat_campaignacct=1; _gat_gtag_UA_68565440_15=1; _ga_9C4T5P6PP6=GS1.1.1725288366.3.1.1725289610.47.0.1488904507; _ga=GA1.2.1845202270.1725013555; Hm_lpvt_953dddc9c7bea72022e3bd3ba7782e7b=1725289611; lastRskxRun=1725289611755' \
+  -H 'dnt: 1' \
+  -H 'priority: u=0, i' \
+  -H 'sec-ch-ua: "Chromium";v="128", "Not;A=Brand";v="24", "Google Chrome";v="128"' \
+  -H 'sec-ch-ua-arch: "arm"' \
+  -H 'sec-ch-ua-bitness: "64"' \
+  -H 'sec-ch-ua-full-version: "128.0.6613.113"' \
+  -H 'sec-ch-ua-full-version-list: "Chromium";v="128.0.6613.113", "Not;A=Brand";v="24.0.0.0", "Google Chrome";v="128.0.6613.113"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-model: ""' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'sec-ch-ua-platform-version: "14.6.1"' \
+  -H 'sec-fetch-dest: document' \
+  -H 'sec-fetch-mode: navigate' \
+  -H 'sec-fetch-site: same-origin' \
+  -H 'sec-fetch-user: ?1' \
+  -H 'upgrade-insecure-requests: 1' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36'
